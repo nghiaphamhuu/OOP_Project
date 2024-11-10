@@ -1,0 +1,18 @@
+﻿@page
+@using WebApplication2.Entity;
+@using WebApplication2.Service;
+@model WebApplication2.Pages.Category.DeleteCategoryModel
+@{
+
+}
+<form method="post">
+  <label for="fname">Name :</label><br>
+  <input type="text" name="typeCd" value="@Model.category.typeCd" readonly><br>
+  <label for="lname">Date:</label><br>
+  <input type="text" name="typeDesc" value="@Model.category.typeDesc" readonly><br><br>
+  <input type="submit" value="Delete">
+</form>
+
+<p>
+	@Model.result
+</p>

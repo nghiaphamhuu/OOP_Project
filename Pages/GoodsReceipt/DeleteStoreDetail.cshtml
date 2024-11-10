@@ -1,0 +1,13 @@
+﻿@page
+@using WebApplication2.Entity;
+@using WebApplication2.Service;
+@model WebApplication2.Pages.GoodsReceipt.DeleteStoreDetailModel
+@{
+
+	List<StoreEntity> stores = HttpContext.Session.GetObject<List<StoreEntity>>("storesUpdateGoodsReceipt");
+	int row = int.Parse(Request.Query["row"]);
+	string goodsReceiptCode = Request.Query["goodsReceiptCode"];
+	stores.Remove(stores[row]);
+	HttpContext.Session.SetObject<List<StoreEntity>>("storesUpdateGoodsReceipt", stores);
+	Response.Redirect("/GoodsReceipt/UpdateGoodsReceipt?continueSession=true&goodsReceiptCode=" + goodsReceiptCode);
+}

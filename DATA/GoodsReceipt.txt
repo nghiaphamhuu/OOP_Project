@@ -1,0 +1,2 @@
+{"goodsReceiptCode":"GR1","insertDate":"10/11/2024","stores":[{"productId":1,"productName":"Nuoc ngot Sting","typeCd":"STING113","quantity":5,"price":10000,"total":50000},{"productId":4,"productName":"Thit cho","typeCd":"Meat","quantity":3,"price":70000,"total":210000}]}
+{"goodsReceiptCode":"GR2","insertDate":"10/11/2024","stores":[{"productId":5,"productName":"Thit ga","typeCd":"Meat","quantity":9,"price":35000,"total":315000},{"productId":3,"productName":"Thit bo","typeCd":"Meat","quantity":10,"price":50000,"total":500000}]}

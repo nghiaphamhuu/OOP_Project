@@ -1,0 +1,41 @@
+﻿@page
+@using WebApplication2.Entity;
+@using WebApplication2.Service;
+@model WebApplication2.Pages.Invoice.IndexModel
+@{
+}
+
+
+<h1>Invoice List</h1>
+<div>
+    <a href="/Invoice/AddInvoice"> Add </a>
+
+    <form method="post">
+        <input type="text" name="keySearch" value="@Model.keySearch" />
+        <input type="submit" value="Search">
+    </form>
+</div>
+@if (@Model.invoices != null && @Model.invoices.Count > 0)
+{
+        <div>
+            <table>
+                <tr>
+                    <th>Invoice Code :</th>
+                    <th>Date :</th>
+                </tr>
+
+            @foreach (var item in @Model.invoices)
+            {
+                        <tr>
+                            <td>@item.invoiceCode</td>
+                            <td>@item.insertDate</td>
+                            <td>
+                                <a href="/Invoice/UpdateInvoice?invoiceCode=@item.invoiceCode">Edit</a> 
+                                <a href="/Invoice/DeleteInvoice?invoiceCode=@item.invoiceCode">Delete</a>
+                            </td>
+                        </tr>
+            }
+            </table>
+        </div>
+}
+

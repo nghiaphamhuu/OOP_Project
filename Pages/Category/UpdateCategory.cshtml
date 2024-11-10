@@ -1,0 +1,18 @@
+﻿@page
+@using WebApplication2.Entity;
+@using WebApplication2.Service;
+@model WebApplication2.Pages.Category.UpdateCategoryModel
+@{
+
+}
+<form method="post">
+  <label for="fname">Type Code :</label><br>
+  <input type="text" name="typeCd" value="@Model.category.typeCd"><br>
+  <label for="lname">Type Description :</label><br>
+  <input type="text" name="typeDesc" value="@Model.category.typeDesc"><br><br>
+  <input type="submit" value="Update">
+</form>
+
+<p>
+	@Model.result
+</p>

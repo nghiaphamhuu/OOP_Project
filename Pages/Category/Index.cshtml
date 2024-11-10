@@ -1,0 +1,40 @@
+﻿@page
+@using WebApplication2.Entity;
+@using WebApplication2.Service;
+@model WebApplication2.Pages.Category.IndexModel
+@{
+}
+
+
+<h1>Categorys List</h1>
+<div>
+    <a href="/Category/AddCategory"> Add </a>
+
+    <form method="post">
+        <input type="text" name="keySearch" value="@Model.keySearch" />
+        <input type="submit" value="Search">
+    </form>
+</div>
+@if (@Model.categorys != null && @Model.categorys.Count > 0)
+{
+        <div>
+            <table>
+                <tr>
+                    <th>Code</th>
+                    <th>Type Description</th>
+                </tr>
+
+            @foreach (var item in @Model.categorys)
+            {
+                        <tr>
+                            <td>@item.typeCd</td>
+                            <td>@item.typeDesc</td>
+                            <td>
+                                <a href="/Category/UpdateCategory?typeCd=@item.typeCd">Edit</a> 
+                                <a href="/Category/DeleteCategory?typeCd=@item.typeCd">Delete</a>
+                            </td>
+                        </tr>
+            }
+            </table>
+        </div>
+}

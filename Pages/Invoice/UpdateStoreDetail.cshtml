@@ -1,0 +1,27 @@
+﻿@page
+@using WebApplication2.Entity;
+@using WebApplication2.Service;
+@model WebApplication2.Pages.Invoice.UpdateStoreDetailModel
+@{
+}
+
+
+<form method="post">
+  <label for="fname">Row Number :</label><br>
+  <input type="text" name="row" value="@Model.row" readonly><br>
+  <label for="fname">Product Id :</label><br>
+	<input type="text" name="productId" value="@Model.storeDetail.productId" readonly><br>
+  <label for="lname">Product Name :</label><br>
+	<input type="text" name="productName" value="@Model.storeDetail.productName" readonly><br><br>
+  <label for="lname">Type :</label><br>
+	<input type="text" name="typeCd" value="@Model.storeDetail.typeCd" readonly><br><br>
+  <label for="lname">Quantity :</label><br>
+	<input type="text" name="quantity" value="@Model.storeDetail.quantity"><br><br>
+  <label for="lname">Price :</label><br>
+	<input type="text" name="price" value="@Model.storeDetail.price" readonly><br><br>
+  <input type="submit" value="Update">
+</form>
+
+<p>
+	@Model.result
+</p>

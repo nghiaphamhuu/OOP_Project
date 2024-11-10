@@ -1,0 +1,3 @@
+{"typeCd":"STING113","typeDesc":"Nuoc ngot"}
+{"typeCd":"VIP","typeDesc":"Hang Vip"}
+{"typeCd":"Meat","typeDesc":"thit"}

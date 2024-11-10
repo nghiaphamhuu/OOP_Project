@@ -1,0 +1,29 @@
+﻿@page
+@using WebApplication2.Entity;
+@using WebApplication2.Service;
+@model WebApplication2.Pages.Product.UpdateProductModel;
+@{
+}
+
+@if(@Model.product != null)
+{
+	<form method="post">
+		<label for="fname">Name :</label><br>
+		<input type="text" name="name" value="@Model.product.name"><br>
+		<label for="lname">Date:</label><br>
+		<input type="text" name="date" value="@Model.product.date"><br><br>
+		<label for="lname">Company Name:</label><br>
+		<input type="text" name="company" value="@Model.product.company"><br><br>
+		<label for="lname">Date Of Produce:</label><br>
+		<input type="text" name="dateOfProduce" value="@Model.product.dateOfProduce"><br><br>
+		<label for="lname">Type :</label><br>
+		<input type="text" name="type" value="@Model.product.type"><br><br>
+		<label for="lname">Price :</label><br>
+		<input type="text" name="price" value="@Model.product.price"><br><br>
+		<input type="submit" value="Update">
+	</form>
+}
+
+<p>
+	@Model.result
+</p>

@@ -1,0 +1,2 @@
+{"invoiceCode":"IV1","insertDate":"10/11/2024","stores":[{"productId":4,"productName":"Thit cho","typeCd":"Meat","quantity":2,"price":70000,"total":140000}]}
+{"invoiceCode":"IV2","insertDate":"10/11/2024","stores":[{"productId":1,"productName":"Nuoc ngot Sting","typeCd":"STING113","quantity":3,"price":10000,"total":30000}]}

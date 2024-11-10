@@ -1,0 +1,4 @@
+{"productId":1,"productName":"Nuoc ngot Sting","typeCd":"STING113","quantity":2,"price":10000,"total":20000}
+{"productId":4,"productName":"Thit cho","typeCd":"Meat","quantity":1,"price":70000,"total":70000}
+{"productId":5,"productName":"Thit ga","typeCd":"Meat","quantity":9,"price":35000,"total":315000}
+{"productId":3,"productName":"Thit bo","typeCd":"Meat","quantity":10,"price":50000,"total":500000}

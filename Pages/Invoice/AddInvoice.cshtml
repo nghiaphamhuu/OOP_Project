@@ -1,0 +1,63 @@
+﻿@page
+@using WebApplication2.Entity;
+@using WebApplication2.Service;
+@model WebApplication2.Pages.Invoice.AddInvoiceModel
+@{
+}
+
+<form method="get">
+	 <select name="selectedProductId">
+		@if (@Model.products != null && @Model.products.Count > 0)
+		{
+			@foreach (var item in @Model.products)
+			{
+				<option value="@item.id"> @item.name</option>
+			}
+		}
+	</select>
+	<input type="text" name="quantityForm" value="">
+	<input type="text" name="keepSession" value="true" hidden="true">
+	<input type="submit" value="Add">
+</form>
+
+<form method="post">
+  <label for="fname">Invoice Code :</label><br>
+	<input type="text" name="invoiceCode" value="@Model.invoice.invoiceCode"><br>
+  <label for="lname">Date Of Insert :</label><br>
+	<input type="text" name="insertDate" value="@Model.invoice.insertDate" readonly><br><br>
+   <div>
+        <table>
+            <tr>
+                <th>Product Id</th>
+                <th>Name Of Product</th>
+                <th>Quantity</th>
+				<th>Type</th>
+                <th>Price</th>
+                <th>Total</th>
+            </tr>
+				
+			@if (@Model.stores != null && @Model.stores.Count > 0)
+			{
+				@foreach (var item in @Model.stores)
+				{
+						<tr>
+							<td>@item.productId</td>
+							<td>@item.productName</td>
+							<td>@item.quantity</td>
+							<td>@item.typeCd</td>
+							<td>@item.price</td>
+							<td>@item.total</td>
+						</tr>
+				}
+			}
+			
+        </table>
+  </div>
+  <input type="submit" value="Create">
+</form>
+
+<p>
+	@Model.result
+</p>
+
+

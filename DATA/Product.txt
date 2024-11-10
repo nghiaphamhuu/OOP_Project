@@ -1,0 +1,5 @@
+{"id":1,"name":"Nuoc ngot Sting","date":"03/12/2024","company":"PEPSI","dateOfProduce":"03/05/2025","type":"STING113","price":10000}
+{"id":2,"name":"Do xa xi","date":"12/12/2024","company":"HAO HAO","dateOfProduce":"30/12/2025","type":"VIP","price":1000000}
+{"id":3,"name":"Thit bo","date":"01/01/2024","company":"MEME","dateOfProduce":"30/12/2025","type":"Meat","price":50000}
+{"id":4,"name":"Thit cho","date":"01/01/2024","company":"MEME","dateOfProduce":"30/12/2025","type":"Meat","price":70000}
+{"id":5,"name":"Thit ga","date":"03/12/2024","company":"ABCS","dateOfProduce":"03/05/2025","type":"Meat","price":35000}

@@ -1,0 +1,26 @@
+﻿@page
+@using WebApplication2.Entity;
+@using WebApplication2.Service;
+@using System.Globalization;
+@model WebApplication2.Pages.Product.AddProductModel;
+@{
+}
+<form method="post">
+  <label for="fname">Name :</label><br>
+  <input type="text" name="name" value=""><br>
+  <label for="lname">Date:</label><br>
+  <input type="text" name="date" value=""><br><br>
+  <label for="lname">Company Name:</label><br>
+  <input type="text" name="company" value=""><br><br>
+  <label for="lname">Date Of Produce:</label><br>
+  <input type="text" name="dateOfProduce" value=""><br><br>
+  <label for="lname">Type :</label><br>
+  <input type="text" name="type" value=""><br><br>
+  <label for="lname">Price :</label><br>
+  <input type="text" name="price" value=""><br><br>
+  <input type="submit" value="Create">
+</form>
+
+<p>
+	@Model.result
+</p>

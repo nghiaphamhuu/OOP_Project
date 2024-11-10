@@ -1,0 +1,50 @@
+﻿@page
+@using WebApplication2.Entity;
+@using WebApplication2.Service;
+@model WebApplication2.Pages.Statistics.StoreByCategoryModel
+@{
+}
+<form method="post">
+    <select name="selectedCategory">
+        <option value=""> All</option>
+        @if (@Model.categorys != null && @Model.categorys.Count > 0)
+        {
+            @foreach (var item in @Model.categorys)
+            {
+                <option value="@item.typeCd"> @item.typeDesc</option>
+            }
+        }
+    </select>
+    <input type="submit" value="Submit" asp-page-handler="OnPost"/>
+</form>
+
+
+
+
+        <div>
+            <table>
+                <tr>
+                    <th>Product Id</th>
+                    <th>Product Name</th>
+                    <th>Type Code</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Total</th>
+                </tr>
+        @if (@Model.stores != null && @Model.stores.Count > 0)
+            {
+            @foreach (var item in @Model.stores)
+                {
+                    <tr>
+                        <td>@item.productId</td>
+                        <td>@item.productName</td>
+                        <td>@item.typeCd</td>
+                        <td>@item.quantity</td>
+                        <td>@item.price</td>
+                        <td>@item.total</td>
+                    </tr>
+                }
+            }
+            </table>
+        </div>
+

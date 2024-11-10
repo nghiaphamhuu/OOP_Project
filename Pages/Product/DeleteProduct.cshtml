@@ -1,0 +1,30 @@
+﻿@page
+@using WebApplication2.Entity;
+@using WebApplication2.Service;
+@model WebApplication2.Pages.Product.DeleteProductModel;
+@{
+
+}
+
+@if (@Model.product != null)
+{
+	<form method="post">
+		<label for="fname">Name :</label><br>
+		<input type="text" name="name" value="@Model.product.name" readonly><br>
+		<label for="lname">Date:</label><br>
+		<input type="text" name="date" value="@Model.product.date" readonly><br><br>
+		<label for="lname">Company Name:</label><br>
+		<input type="text" name="company" value="@Model.product.company" readonly><br><br>
+		<label for="lname">Date Of Produce:</label><br>
+		<input type="text" name="dateOfProduce" value="@Model.product.dateOfProduce" readonly><br><br>
+		<label for="lname">Type :</label><br>
+		<input type="text" name="type" value="@Model.product.type" readonly><br><br>
+		<label for="lname">Price :</label><br>
+		<input type="text" name="price" value="@Model.product.price" readonly><br><br>
+		<input type="submit" value="Delete">
+	</form>
+}
+
+<p>
+	@Model.result
+</p>
